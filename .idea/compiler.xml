@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="DirectedGraphDemo" />
         <module name="PerroneGraphDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.9">
-      <module name="PerroneGraphDemo" target="1.8" />
+      <module name="DirectedGraphDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

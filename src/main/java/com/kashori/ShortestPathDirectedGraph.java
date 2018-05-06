@@ -1,15 +1,10 @@
 package com.kashori;
 
-import org.jgrapht.Graph;
-import org.jgrapht.GraphPath;
-import org.jgrapht.alg.interfaces.ShortestPathAlgorithm;
-import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
-import org.jgrapht.graph.DefaultDirectedGraph;
-import org.jgrapht.graph.DefaultEdge;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+
+import com.kashori.Graph;
 
 /**
  * A Java application that finds the shortest path in a directed graph.
@@ -25,15 +20,7 @@ import java.io.FileReader;
  *
  * Requires http://jgrapht.org/</b>
  *
- * Using Maven include:
- * {@code
- * <groupId>org.jgrapht</groupId>
- * <artifactId>jgrapht-core</artifactId>
- * <version>1.1.0</version>
- * }
- * </pre>
- *
- * run as "java com.kashori.ShortestPathDirectedGraph filename node1 node2"
+ *  * run as "java com.kashori.ShortestPathDirectedGraph filename node1 node2"
  *
  */
 public class ShortestPathDirectedGraph {
@@ -86,7 +73,7 @@ public class ShortestPathDirectedGraph {
             String line;
             // constructs a directed graph with the specified vertices and edges
             Graph<String, DefaultEdge> directedGraph =
-                    new DefaultDirectedGraph<String, DefaultEdge>(DefaultEdge.class);
+                    new DirectedGraph<String, DefaultEdge>(DefaultEdge.class);
             while ((line = bufferedReader.readLine()) != null) {
                 String[] edge = line.split(" +");
                 if ((edge.length == 2) ) {
