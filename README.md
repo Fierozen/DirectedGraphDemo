@@ -1,4 +1,4 @@
-# PerroneGraphDemo
+# DirectedGraphDemo
 
 This is an application that demonstrates searching for the shortest path in a directed graph.
 
