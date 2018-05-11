@@ -1,8 +1,5 @@
 package com.kashori;
 
-import sun.util.resources.CalendarData;
-
-import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -10,54 +7,14 @@ import java.util.*;
  */
 
 
-
-
-
-class EdgeClassFactory<V, E> {
-
-    private final Class<? extends E> edgeClass;
-
-    /**
-     * Create a new instance of an edge class
-     *
-     * @param edgeClass the edge class
-     */
-    public EdgeClassFactory(Class<? extends E> edgeClass)
-    {
-        this.edgeClass = edgeClass;
-    }
-
-    public E createEdge(V source, V target)
-    {
-        try {
-            E e = edgeClass.getDeclaredConstructor().newInstance();
-            Edge edge = null;
-            if (e instanceof Edge) {
-                edge = (Edge)e;
-            }
-            edge.setVertices(source, target);
-            return e;
-        } catch (Exception ex) {
-            throw new RuntimeException("Edge factory failed", ex);
-        }
-    }
-}
-
-// DirectedGraph
+/**
+ *
+ */
 public class DirectedGraphImpl<V, E> {
 
     Map<V, EdgeIO<E>> vertexEdgeMap;
 
     Map<E, E> edgeMap;
-    /*
-     * Maps a pair of vertices <u,v> to a set of edges {(u,v)}. In case of a multigraph, all edges
-     * which touch both u,v are included in the set
-     */
-    protected Map<Pair<V, V>, ArrayUnenforcedSet<E>> touchingVerticesToEdgeMap;
-
-    Set<V> vertexSet;
-
-    //Class<E> edgeClass;
 
     EdgeClassFactory<V, E> edgeFactory;
 
@@ -160,12 +117,11 @@ public class DirectedGraphImpl<V, E> {
         StringBuilder sb = new StringBuilder();
         for (E e : edgeSet) {
             sb.append("("); //symbol for directed graph
-            sb.append(((Edge)e).source);
+            sb.append(((Edge)e).getSource());
             sb.append(",");
-            sb.append(((Edge)e).target);
+            sb.append(((Edge)e).getTarget());
             sb.append(")"); //symbol for directed graph
 
-            // REVIEW jvs 29-May-2006: dump weight somewhere?
             renderedEdges.add(sb.toString());
             sb.setLength(0);
         }

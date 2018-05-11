@@ -1,25 +1,25 @@
 package com.kashori;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * Created by johnblack on 5/7/18.
  */
+
 public class Edge implements Cloneable, Serializable
 {
-    private static final long serialVersionUID = 3258408452177932855L;
+    private static final long serialVersionUID = 3239260523808782799L;
 
-    public Object source = null;
+    private Object source = null;
 
-    public Object target = null;
+    private Object target = null;
 
-    public void setVertices(Object source, Object target) {
+    protected void setVertices(Object source, Object target) {
         this.source = source;
         this.target = target;
     }
 
-    public Object getSource() {
+    protected Object getSource() {
         return source;
     }
 
