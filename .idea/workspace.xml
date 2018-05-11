@@ -2,65 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38dd0df3-5841-4987-9def-c750921814f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/EdgeClassFactory.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/AbstractBaseGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/AbstractGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/AbstractGraphBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ArrayUnenforcedSet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ArrayUnenforcedSetEdgeSetFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/AsUndirectedGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/AsUnmodifiableGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/BaseIntrusiveEdgesSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/BaseShortestPathAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ClassBasedEdgeFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DefaultEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DefaultGraphType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DefaultWeightedEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DijkstraClosestFirstIterator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DijkstraShortestPath.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DirectedEdgeContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DirectedGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DirectedSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/EdgeFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/EdgeSetFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/FastLookupDirectedSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/FastLookupUndirectedSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/FibonacciHeap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/FibonacciHeapNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/Graph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/GraphBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/GraphDelegator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/GraphPath.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/GraphTests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/GraphType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/GraphWalk.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/Graphs.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/IntrusiveEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/IntrusiveEdgesSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/IntrusiveWeightedEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ListSingleSourcePathsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/Node.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/Pair.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/PathExistsGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ShortestPathAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/SimpleEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/SimpleGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/Specifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/TreeSingleSourcePathsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/TypeUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/UndirectedEdgeContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/UndirectedSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/UniformIntrusiveEdgesSpecifics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/UnorderedPair.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/WeightedIntrusiveEdgesSpecifics.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GraphEdges.txt" afterPath="$PROJECT_DIR$/GraphEdges.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ArrayListSet.java" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/ArrayListSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/DirectedGraphImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/DirectedGraphImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/Edge.java" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/Edge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/EdgeIO.java" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/EdgeIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/PathExistsAlg.java" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/PathExistsAlg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kashori/ShortestPathDirectedGraph.java" afterPath="$PROJECT_DIR$/src/main/java/com/kashori/ShortestPathDirectedGraph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -113,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EdgeClassFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EdgeClassFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kashori/EdgeClassFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -122,6 +64,19 @@
                 <element signature="e#325#326#0" expanded="true" />
                 <element signature="e#367#368#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="300">
+                <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -239,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kashori/IntrusiveWeightedEdge.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kashori/IntrusiveEdge.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kashori/BaseIntrusiveEdgesSpecifics.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kashori/UniformIntrusiveEdgesSpecifics.java" />
@@ -290,6 +244,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kashori/DirectedGraphImpl.java" />
         <option value="$PROJECT_DIR$/GraphEdges.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/kashori/EdgeClassFactory.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -876,12 +831,12 @@
       <workItem from="1525625629906" duration="92000" />
       <workItem from="1525626512412" duration="206000" />
       <workItem from="1525626723050" duration="87726000" />
-      <workItem from="1526002791626" duration="5241000" />
+      <workItem from="1526002791626" duration="6091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99704000" />
+    <option name="totallyTimeSpent" value="100554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="99" y="23" width="1790" height="998" extended-state="0" />
@@ -999,14 +954,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kashori/UndirectedEdgeContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1436,6 +1383,17 @@
             <element signature="e#325#326#0" expanded="true" />
             <element signature="e#367#368#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
