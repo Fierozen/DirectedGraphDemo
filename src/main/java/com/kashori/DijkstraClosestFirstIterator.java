@@ -19,7 +19,7 @@ import com.kashori.ShortestPathAlgorithm.SingleSourcePaths;
  *
  * <p>
  * NOTE: This is an internal iterator for use in shortest paths algorithms. This
- * implementation is must faster since it does not support graph traversal listeners nor
+ * implementation is much faster since it does not support graph traversal listeners nor
  * disconnected components.
  *
  * @param <V> the graph vertex type

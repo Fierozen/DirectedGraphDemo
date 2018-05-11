@@ -3,6 +3,8 @@ package com.kashori;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 import com.kashori.Graph;
 
@@ -74,9 +76,15 @@ public class ShortestPathDirectedGraph {
             // constructs a directed graph with the specified vertices and edges
             Graph<String, DefaultEdge> directedGraph =
                     new DirectedGraph<String, DefaultEdge>(DefaultEdge.class);
+
+            DirectedGraphImpl<String, Edge> directedGraph1 =
+                    new DirectedGraphImpl<>(Edge.class);
+
+            PathExistsGraph g = new PathExistsGraph(4);
+
             while ((line = bufferedReader.readLine()) != null) {
                 String[] edge = line.split(" +");
-                if ((edge.length == 2) ) {
+                if ((edge.length == 2)) {
                     String source = edge[0].trim();
                     String target = edge[1].trim();
                     if (verbose) {
@@ -85,6 +93,12 @@ public class ShortestPathDirectedGraph {
                     directedGraph.addVertex(source);
                     directedGraph.addVertex(target);
                     directedGraph.addEdge(source, target);
+
+                    directedGraph1.addVertex(source);
+                    directedGraph1.addVertex(target);
+                    directedGraph1.addEdge(source, target);
+
+
                 } else {
                     System.err.printf("Not a valid edge -> %s\n", line);
                 }
@@ -97,16 +111,25 @@ public class ShortestPathDirectedGraph {
             if (!directedGraph.containsVertex(node1)) {
                 System.err.printf("Error: %s is not a valid source node in the graph.\n", node1);
                 printUsageExit();
-            };
+            }
             // Check to see if the target node2 exists in the current graph
             if (!directedGraph.containsVertex(node2)) {
                 System.err.printf("Error: %s is not a valid target node in the graph.\n", node2);
                 printUsageExit();
-            };
+            }
+            if (node1.equals(node2)) {
+                System.out.printf("Source %s and Target %s are the same.\n",node1, node2);
+                System.out.printf("Path is [%s]\n", node1);
+                System.exit(0);
+            }
+
+
             DijkstraShortestPath<String, DefaultEdge> dijkstraAlg =
                     new DijkstraShortestPath<>(directedGraph);
             ShortestPathAlgorithm.SingleSourcePaths<String, DefaultEdge> iPaths = dijkstraAlg.getPaths(node1);
             GraphPath<String, DefaultEdge> shortestPath = iPaths.getPath(node2);
+
+
             if (shortestPath != null) {
                 System.out.printf("This is the shortest path from %s to %s\n %s\n\n",
                         node1, node2, shortestPath.toString());
@@ -114,6 +137,17 @@ public class ShortestPathDirectedGraph {
                 System.out.printf("There is NO path from %s to %s\n\n", node1, node2);
             }
             fileReader.close();
+
+            PathExistsAlg pathExistsAlg = new PathExistsAlg(directedGraph1);
+            LinkedList<String> pathFound = pathExistsAlg.isReachablePath(node1, node2);
+            if (pathFound.isEmpty()) {
+                System.out.printf("There is no path from %s to %s\n", node1, node2);
+            } else {
+                System.out.printf("At least one path exists from %s to %s!\n", node1, node2);
+                System.out.printf("The path found is: %s\n", pathFound.toString());
+            }
+
+
             if (verbose) {
                 System.out.println("Computed using the following file:");
                 System.out.println(stringBuilder.toString());
@@ -121,6 +155,47 @@ public class ShortestPathDirectedGraph {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    public void runSimpleGraph() {
+        SimpleEdge[] edges = {
+                new SimpleEdge(0, 2, 1), new SimpleEdge(0, 3, 4), new SimpleEdge(0, 4, 2),
+                new SimpleEdge(0, 1, 3), new SimpleEdge(1, 3, 2), new SimpleEdge(1, 4, 3),
+                new SimpleEdge(1, 5, 1), new SimpleEdge(2, 4, 1), new SimpleEdge(3, 5, 4),
+                new SimpleEdge(4, 5, 2), new SimpleEdge(4, 6, 7), new SimpleEdge(4, 7, 2),
+                new SimpleEdge(5, 6, 4), new SimpleEdge(6, 7, 5)
+        };
+        SimpleGraph g = new SimpleGraph(edges);
+        g.calculateShortestDistances();
+        g.printResult(); // let's try it !
+    }
+
+    // Driver method
+    public void runPathExistsGraph()
+    {
+        // Create a graph given in the above diagram
+        PathExistsGraph g = new PathExistsGraph(4);
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+
+        int u = 1;
+        int v = 3;
+        if (g.isReachable(u, v))
+            System.out.println("There is a path from " + u +" to " + v);
+        else
+            System.out.println("There is no path from " + u +" to " + v);;
+
+        u = 3;
+        v = 1;
+        if (g.isReachable(u, v))
+            System.out.println("There is a path from " + u +" to " + v);
+        else
+            System.out.println("There is no path from " + u +" to " + v);;
     }
 
     /**
@@ -146,5 +221,10 @@ public class ShortestPathDirectedGraph {
         String node1 = args[1];
         String node2 = args[2];
         runCheckFind.runCheckFindShortestPath(filename, node1, node2);
+//        System.out.println("------------------------------------------");
+//        runCheckFind.runSimpleGraph();
+//        System.out.println("------------------------------------------");
+//        runCheckFind.runPathExistsGraph();
+
     }
 }
